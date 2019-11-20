@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LMX-cn-OZX">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Podcast Detail View Controller-->
+        <scene sceneID="VlP-lk-IMW">
+            <objects>
+                <tableViewController id="LMX-cn-OZX" customClass="PodcastDetailViewController" customModule="PodcastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nhY-eE-9bD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="kol-S2-DZ7">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="580"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <connections>
+                                <segue destination="n2b-Md-RII" kind="embed" id="7yA-x4-i5H"/>
+                            </connections>
+                        </containerView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeCell" rowHeight="86" id="0et-ST-1db" customClass="EpisodeCell" customModule="PodcastApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="608" width="375" height="86"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0et-ST-1db" id="eX5-yD-9zx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="kWK-a9-A8j">
+                                            <rect key="frame" x="16" y="11" width="343" height="64"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl1-4e-Sak">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:34:02 • May 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpv-08-MmW">
+                                                    <rect key="frame" x="0.0" y="23.333333333333336" width="343" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="A description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHz-jp-jX9">
+                                                    <rect key="frame" x="0.0" y="44.333333333333336" width="343" height="19.666666666666664"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kWK-a9-A8j" secondAttribute="trailing" id="NFw-Q2-WT3"/>
+                                        <constraint firstItem="kWK-a9-A8j" firstAttribute="top" secondItem="eX5-yD-9zx" secondAttribute="topMargin" id="UWS-AL-FG3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kWK-a9-A8j" secondAttribute="bottom" id="oCN-WW-BQo"/>
+                                        <constraint firstItem="kWK-a9-A8j" firstAttribute="leading" secondItem="eX5-yD-9zx" secondAttribute="leadingMargin" id="t5b-ND-4aS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="cHz-jp-jX9" id="BbU-Bk-5b8"/>
+                                    <outlet property="infoLabel" destination="Gpv-08-MmW" id="ls9-0D-wTo"/>
+                                    <outlet property="titleLabel" destination="wl1-4e-Sak" id="YmG-xG-qRn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LMX-cn-OZX" id="occ-8d-Mn9"/>
+                            <outlet property="delegate" destination="LMX-cn-OZX" id="6RE-gc-h0r"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMm-lu-jpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194.40000000000001" y="105.66502463054188"/>
+        </scene>
+        <!--Podcast Detail Header View Controller-->
+        <scene sceneID="tSj-R3-9YJ">
+            <objects>
+                <viewController id="n2b-Md-RII" customClass="PodcastDetailHeaderViewController" customModule="PodcastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="swa-bf-li7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cXP-Ci-UgY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cXP-Ci-UgY" secondAttribute="height" multiplier="1:1" id="NYl-b4-YtN"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szd-g4-iOP" customClass="GradientBackgroundView" customModule="PodcastApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="186.33333333333334" width="375" height="274.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5zX-fk-5dR">
+                                        <rect key="frame" x="28" y="187.99999999999997" width="319" height="58.666666666666657"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-D6-tRV" userLabel="Labels Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="58.666666666666664"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Podcast Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABy-fa-Mr7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="19.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <color key="textColor" red="0.55699777603149414" green="0.55651599168777466" blue="0.57641011476516724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-7t-iuj">
+                                                        <rect key="frame" x="0.0" y="22.333333333333371" width="45" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <color key="textColor" red="0.30607381463050842" green="0.3053877055644989" blue="0.33325070142745972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewl-6E-Wux" customClass="GenreLabel" customModule="PodcastApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="42.333333333333371" width="51" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                        <color key="textColor" red="0.30607381463050842" green="0.3053877055644989" blue="0.33325070142745972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalInset">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5K-bX-XgM" customClass="SubscribeButton" customModule="PodcastApp" customModuleProvider="target">
+                                                <rect key="frame" x="169" y="6.3333333333333712" width="150" height="46"/>
+                                                <state key="normal" title="SUBSCRIBE"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="5zX-fk-5dR" secondAttribute="trailing" constant="20" id="CiM-N6-YkR"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="5zX-fk-5dR" secondAttribute="bottom" constant="20" id="lZI-84-2gQ"/>
+                                    <constraint firstItem="5zX-fk-5dR" firstAttribute="top" secondItem="szd-g4-iOP" secondAttribute="topMargin" constant="180" id="o3v-sf-CDK"/>
+                                    <constraint firstItem="5zX-fk-5dR" firstAttribute="leading" secondItem="szd-g4-iOP" secondAttribute="leadingMargin" constant="20" id="w9v-sV-70c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ho-4l-mJe" customClass="SeparatorView" customModule="PodcastApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="469" width="375" height="12"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="nzQ-1u-GEf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgD-nn-xFg">
+                                <rect key="frame" x="16" y="497" width="343" height="67"/>
+                                <string key="text">A podcast about the internet' that is actually an unfailingly original exploration of modern life and how to survive it." - The Guardian. Hosted by PJ Vogt and Alex Goldman, from Gimlet</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.55307626724243164" green="0.55259442329406738" blue="0.57248860597610474" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078570239245891571" green="0.074349574744701385" blue="0.082337446510791779" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZgD-nn-xFg" secondAttribute="trailing" constant="16" id="9Al-hg-UrJ"/>
+                            <constraint firstItem="ZgD-nn-xFg" firstAttribute="leading" secondItem="swa-bf-li7" secondAttribute="leading" constant="16" id="LsM-4Y-JEI"/>
+                            <constraint firstItem="ZgD-nn-xFg" firstAttribute="top" secondItem="5ho-4l-mJe" secondAttribute="bottom" constant="16" id="NSp-h9-FOq"/>
+                            <constraint firstItem="cXP-Ci-UgY" firstAttribute="leading" secondItem="swa-bf-li7" secondAttribute="leading" id="ZnL-1O-82Y"/>
+                            <constraint firstAttribute="trailing" secondItem="szd-g4-iOP" secondAttribute="trailing" id="b3P-2u-FBi"/>
+                            <constraint firstItem="szd-g4-iOP" firstAttribute="leading" secondItem="swa-bf-li7" secondAttribute="leading" id="cTz-e7-EZp"/>
+                            <constraint firstItem="5ho-4l-mJe" firstAttribute="leading" secondItem="swa-bf-li7" secondAttribute="leading" id="cew-AX-3mw"/>
+                            <constraint firstAttribute="trailing" secondItem="cXP-Ci-UgY" secondAttribute="trailing" id="dwa-I8-Bu4"/>
+                            <constraint firstItem="cXP-Ci-UgY" firstAttribute="top" secondItem="swa-bf-li7" secondAttribute="top" id="mfr-8S-RPa"/>
+                            <constraint firstItem="5ho-4l-mJe" firstAttribute="top" secondItem="szd-g4-iOP" secondAttribute="bottom" constant="8" id="on6-sG-CzH"/>
+                            <constraint firstAttribute="trailing" secondItem="5ho-4l-mJe" secondAttribute="trailing" id="wqU-Py-Ez1"/>
+                            <constraint firstAttribute="bottom" secondItem="ZgD-nn-xFg" secondAttribute="bottom" constant="16" id="zHD-Lz-bol"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jVc-fD-s7S"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="ogy-7t-iuj" id="mQs-Br-ZP3"/>
+                        <outlet property="descriptionLabel" destination="ZgD-nn-xFg" id="3jt-pf-Dmy"/>
+                        <outlet property="genreLabel" destination="Ewl-6E-Wux" id="dB2-Dq-212"/>
+                        <outlet property="imageView" destination="cXP-Ci-UgY" id="BJN-rH-hu5"/>
+                        <outlet property="subscribeButton" destination="G5K-bX-XgM" id="5PM-zJ-Dqo"/>
+                        <outlet property="titleLabel" destination="ABy-fa-Mr7" id="FOC-Eg-1iD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hI-B2-lyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165.5999999999999" y="-113.05418719211823"/>
+        </scene>
+    </scenes>
+</document>

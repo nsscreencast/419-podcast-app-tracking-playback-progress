@@ -1,0 +1,20 @@
+PODS:
+  - FeedKit (8.1.1)
+  - Kingfisher (5.3.1)
+
+DEPENDENCIES:
+  - FeedKit
+  - Kingfisher (~> 5.3.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FeedKit
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  FeedKit: 3418eed25f0b493b205b4de1b8511ac21d413fa9
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+
+PODFILE CHECKSUM: 85b76639e9e824df1d4a7ef49c07d6e75805c6e4
+
+COCOAPODS: 1.6.1

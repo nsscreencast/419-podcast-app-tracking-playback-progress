@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1FN-AD-Td0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Priority-->
+        <scene sceneID="gID-rZ-Y4G">
+            <objects>
+                <tableViewController id="qiz-FW-EhL" customClass="PlaylistViewController" customModule="PodcastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HOY-ws-WVt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="94" id="n7d-Me-xu9" customClass="PlaylistCell" customModule="PodcastApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n7d-Me-xu9" id="4wR-hk-IFb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Podcast" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP7-O0-rbU">
+                                            <rect key="frame" x="64" y="37.5" width="330" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Episode Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q31-dS-q3z">
+                                            <rect key="frame" x="64" y="16" width="330" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ObU-nG-it1">
+                                            <rect key="frame" x="8" y="24" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="7Uy-Yq-a0H"/>
+                                                <constraint firstAttribute="width" constant="44" id="q8E-gG-rhL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:41" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxN-IA-3XD">
+                                            <rect key="frame" x="64" y="63" width="27.5" height="15"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SP7-O0-rbU" firstAttribute="leading" secondItem="Q31-dS-q3z" secondAttribute="leading" id="0jP-om-zkU"/>
+                                        <constraint firstItem="MxN-IA-3XD" firstAttribute="leading" secondItem="SP7-O0-rbU" secondAttribute="leading" id="Ekh-qn-Tm4"/>
+                                        <constraint firstItem="Q31-dS-q3z" firstAttribute="top" secondItem="4wR-hk-IFb" secondAttribute="top" constant="16" id="IE9-E0-TP9"/>
+                                        <constraint firstItem="MxN-IA-3XD" firstAttribute="top" secondItem="SP7-O0-rbU" secondAttribute="bottom" constant="7.5" id="Vbn-3s-Sc3"/>
+                                        <constraint firstAttribute="bottom" secondItem="MxN-IA-3XD" secondAttribute="bottom" constant="16" id="XPD-VO-51e"/>
+                                        <constraint firstItem="SP7-O0-rbU" firstAttribute="width" secondItem="Q31-dS-q3z" secondAttribute="width" id="Zmh-Bo-yS8"/>
+                                        <constraint firstItem="SP7-O0-rbU" firstAttribute="firstBaseline" secondItem="Q31-dS-q3z" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="cKY-h8-MzQ"/>
+                                        <constraint firstItem="Q31-dS-q3z" firstAttribute="leading" secondItem="ObU-nG-it1" secondAttribute="trailing" constant="12" id="eLl-wJ-gVm"/>
+                                        <constraint firstItem="ObU-nG-it1" firstAttribute="leading" secondItem="4wR-hk-IFb" secondAttribute="leading" constant="8" id="jTd-zl-V5s"/>
+                                        <constraint firstItem="Q31-dS-q3z" firstAttribute="trailing" secondItem="4wR-hk-IFb" secondAttribute="trailingMargin" id="lU7-d6-uSz"/>
+                                        <constraint firstItem="ObU-nG-it1" firstAttribute="top" secondItem="4wR-hk-IFb" secondAttribute="top" constant="24" id="r5o-2P-wpb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artworkImageView" destination="ObU-nG-it1" id="4mv-47-dAG"/>
+                                    <outlet property="durationLabel" destination="MxN-IA-3XD" id="cbS-P6-bO9"/>
+                                    <outlet property="episodeTitleLabel" destination="Q31-dS-q3z" id="Yg1-Ct-KB3"/>
+                                    <outlet property="podcastLabel" destination="SP7-O0-rbU" id="C53-V1-oNH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qiz-FW-EhL" id="wwz-Dl-hKj"/>
+                            <outlet property="delegate" destination="qiz-FW-EhL" id="K1T-UP-JRO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Priority" id="TEs-YO-WW6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5O-Si-DpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197.1014492753625" y="162.72321428571428"/>
+        </scene>
+        <!--Priority-->
+        <scene sceneID="F6f-rC-DCo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1FN-AD-Td0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Priority" image="tab-icon-priority" id="Vnp-jO-3eZ"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="evU-qa-TER">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qiz-FW-EhL" kind="relationship" relationship="rootViewController" id="pI5-x1-jej"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3Z-7O-2h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286.95652173913044" y="162.72321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab-icon-priority" width="25" height="25"/>
+    </resources>
+</document>

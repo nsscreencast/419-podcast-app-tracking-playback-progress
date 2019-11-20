@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nVo-Xp-TA5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Podcasts-->
+        <scene sceneID="B2H-HH-oq8">
+            <objects>
+                <tableViewController id="N7e-cw-Qjb" customClass="MyPodcastsViewController" customModule="PodcastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Gz-ac-mn6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PodcastCell" rowHeight="94" id="siw-sO-SBu" customClass="PodcastCell" customModule="PodcastApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="siw-sO-SBu" id="lWK-yL-hYO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNZ-W8-Aw5">
+                                            <rect key="frame" x="102" y="36.5" width="292" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-Ro-MI5">
+                                            <rect key="frame" x="102" y="12" width="292" height="24"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="byw-Zg-nev">
+                                            <rect key="frame" x="20" y="10" width="74" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="74" id="OU9-DT-Xqt"/>
+                                                <constraint firstAttribute="height" constant="74" id="SzB-rm-NXC"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Pdp-Ro-MI5" firstAttribute="top" secondItem="byw-Zg-nev" secondAttribute="top" constant="2" id="Bmb-P4-BNM"/>
+                                        <constraint firstItem="cNZ-W8-Aw5" firstAttribute="leading" secondItem="Pdp-Ro-MI5" secondAttribute="leading" id="Gu0-IN-WIo"/>
+                                        <constraint firstItem="Pdp-Ro-MI5" firstAttribute="leading" secondItem="byw-Zg-nev" secondAttribute="trailing" constant="8" id="Rn4-B9-LLO"/>
+                                        <constraint firstItem="cNZ-W8-Aw5" firstAttribute="width" secondItem="Pdp-Ro-MI5" secondAttribute="width" id="cWu-1I-puk"/>
+                                        <constraint firstAttribute="trailing" secondItem="Pdp-Ro-MI5" secondAttribute="trailing" constant="20" id="rIy-em-3Fn"/>
+                                        <constraint firstItem="cNZ-W8-Aw5" firstAttribute="firstBaseline" secondItem="Pdp-Ro-MI5" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="vzP-4h-jw1"/>
+                                        <constraint firstItem="byw-Zg-nev" firstAttribute="centerY" secondItem="lWK-yL-hYO" secondAttribute="centerY" id="yat-cS-xRb"/>
+                                        <constraint firstItem="byw-Zg-nev" firstAttribute="leading" secondItem="lWK-yL-hYO" secondAttribute="leading" constant="20" id="zN6-8f-o25"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artworkImageView" destination="byw-Zg-nev" id="PXB-8r-b3r"/>
+                                    <outlet property="podcastAuthorLabel" destination="cNZ-W8-Aw5" id="Uc2-e0-KMq"/>
+                                    <outlet property="podcastTitleLabel" destination="Pdp-Ro-MI5" id="Gqg-pe-LfT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N7e-cw-Qjb" id="drH-pc-QE2"/>
+                            <outlet property="delegate" destination="N7e-cw-Qjb" id="8uq-ip-R8T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Podcasts" id="eFG-VZ-K8O"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QX-26-JBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="101.78571428571428"/>
+        </scene>
+        <!--Podcasts-->
+        <scene sceneID="thb-1Q-pAg">
+            <objects>
+                <navigationController id="nVo-Xp-TA5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="tab-icon-collection" id="FsY-XM-xZw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YDE-HK-1Pg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="N7e-cw-Qjb" kind="relationship" relationship="rootViewController" id="uEX-NO-DZY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixQ-S8-nwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab-icon-collection" width="25" height="25"/>
+    </resources>
+</document>
